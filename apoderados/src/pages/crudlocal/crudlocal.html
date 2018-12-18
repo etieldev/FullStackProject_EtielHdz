@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>CRUD local de firmas</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="openAlertNewFirma()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   <ion-list>
+     <ion-item *ngIf="firma.length == 0"> 
+      No se han introducido datos aún
+     </ion-item>
+    <ion-item-sliding *ngFor="let firma of firmas; let i = index">
+      <ion-item >
+        <ion-label>{{ firma.numEscritura }}</ion-label>
+        <ion-label>{{ firma.fecha }}</ion-label>
+        <ion-label>{{ firma.precioVivienda }}</ion-label>
+        <ion-label>{{ firma.numCaras }}</ion-label>
+        <ion-label>{{ firma.garaje }}</ion-label>
+        <ion-label>{{ firma.trastero }}</ion-label>
+        <ion-label>{{ firma.numPersona }}</ion-label>
+        <ion-label>{{ firma.idOficinas }}</ion-label>
+        <ion-checkbox (ionChange)="updateFirma( firma, i )" [checked]="firma.completed"></ion-checkbox>
+      </ion-item>
+      <ion-item-options side="right" icon-left>
+        <button ion-button color="danger" (click)="deleteFirma(firma, i)">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

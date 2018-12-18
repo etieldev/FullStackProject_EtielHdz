@@ -1,0 +1,52 @@
+page-createaccount3 {
+    .toolbar-background {
+        background-color: rgb(198, 209, 196) !important;
+      }
+
+    h2{
+      text-align: center;
+      color: brown;
+      border-style: dotted
+    }
+
+    #signup{
+        width: 90px;
+        height: 70px
+    }
+
+    #signup{
+        display: block;
+        margin: auto;
+    }
+
+    input:invalid {
+        border: 1px solid red;
+      }
+      
+      input:valid {
+        border: 1px solid green;
+      }
+
+      .container{
+        text-align: center
+    }
+
+    #idnotary{
+      font:bold 22px "Trebuchet MS";
+      color: darkgreen;
+      text-align: center;
+      border-style: dotted
+      }
+
+      #password{
+       font:bold 22px "Trebuchet MS";
+        color: darkgreen;
+        text-align: center;
+        border-style: dotted
+      }
+
+      #fondo {
+        background: linear-gradient(top, white, #D2B4B4);
+    }
+
+}

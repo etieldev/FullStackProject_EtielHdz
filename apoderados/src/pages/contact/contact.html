@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Clientes
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="createCliente()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id= "fondo">
+        <h1>Listado de Clientes</h1>
+        <ion-list>
+          <ion-item-sliding *ngFor="let c of clientes">
+            <ion-item text-wrap>
+              <h2>Nombre: {{c.Nombre}}</h2>  
+              <p>Primer apellido: {{c.Apellido1}}</p>  
+              <p>Segundo apellido: {{c.Apellido2}}</p>  
+              <p>NIF: {{c.NIF}}</p>         
+            </ion-item>
+            <ion-item-options>
+              <button ion-button color="primary" (click)= "updateCliente(c)">
+                <ion-icon name="create"></ion-icon> Update
+              </button>
+              <button ion-button color="danger" (click)= "deleteClienteById(c.id)">
+                <ion-icon name="trash"></ion-icon> Delete
+              </button>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list> 
+</ion-content>

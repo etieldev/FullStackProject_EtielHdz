@@ -1,0 +1,73 @@
+ #login{
+        width: 90px;
+        height: 70px
+    }
+
+    #login{
+        display: block;
+        margin: auto;
+    }
+
+    body{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #FFE4E1;
+    }
+
+h1.title { 
+    font-size: 50px;
+    font-family: 'Passion One', cursive; 
+    font-weight: 400; 
+}
+
+    .panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+    padding: 1px 15px;
+    color: #A0A0A0;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+a{
+    font-weight: bold;
+    color:  #000000;
+}
+
+#fondo{
+    background-color: rgb(198, 209, 196);
+}
+
+strong{
+    text-align: center;
+    color: brown;
+    display: block;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    color: brown;
+    border-style: dotted;
+    display: block;
+    margin: auto;
+}
+
+h3{
+    text-align: center;
+    color: green;
+    border-style: dotted;
+    display: block;
+    margin: auto;
+}
+

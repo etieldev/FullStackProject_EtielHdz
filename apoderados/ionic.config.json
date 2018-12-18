@@ -1,0 +1,7 @@
+{
+  "name": "apoderados",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

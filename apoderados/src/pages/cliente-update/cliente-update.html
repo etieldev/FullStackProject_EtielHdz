@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Client Update</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id = "fondo">
+  <form #clienteForm="ngForm" (ngSubmit)="save(clienteForm.value)">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item>
+            <ion-input placeholder="Nombre" name="Nombre" type="text" required [(ngModel)]="cliente.Nombre" #Nombre></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Primer Apellido" name="Apellido1" type="text" required [(ngModel)]="cliente.Apellido1" #Apellido1></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Segundo Apellido" name="Apellido2" type="text" required [(ngModel)]="cliente.Apellido2" #Apellido2></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="NIF" name="Apellido3" type="text" required [(ngModel)]="cliente.NIF" #NIF></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+        <button ion-button color="primary" full type="submit" [disabled]="!clienteForm.form.valid">Save</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

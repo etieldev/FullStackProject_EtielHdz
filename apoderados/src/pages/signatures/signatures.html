@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Signature List
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="createFirma()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="goToCrudLocal()">
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="fondo">
+  <img src="assets/imgs/pluma.png" id="firma">
+  <br />
+  <ion-list id="galleryHiden" class="oculto">
+    <ion-item-sliding *ngFor="let f of firmas">
+      <ion-item text-wrap>
+        <h3>Número de escritura: {{f.num_escritura}}</h3>
+        <h3>Fecha: {{f.fecha}}</h3>
+        <h3>Precio de la vivienda: {{f.precio_vivienda}}</h3>
+        <h3>Caras del documento: {{f.num_caras}}</h3>
+        <h3>Garaje: {{f.garaje}}</h3>
+        <h3>Trastero: {{f.trastero}}</h3>
+        <h3>Número de personas: {{f.num_persona}}</h3>
+        <h3>Id de oficina: {{f.id_Oficinas.id_Oficinas}}</h3>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="primary" (click)="updateFirma(f)">
+          <ion-icon name="create"></ion-icon> Update
+        </button>
+        <button ion-button color="danger" (click)="deleteFirmaById(f.id_Firma)">
+          <ion-icon name="trash"></ion-icon> Delete
+        </button>
+        <button ion-button color="secondary" (click)="goToAdminPage()">
+          <ion-icon name="md-checkmark"></ion-icon> Confirm
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

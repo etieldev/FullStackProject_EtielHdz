@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id = "fondo">
+  <br />
+  <h2 id='title'><span class="colors">Step 1 of 3</span></h2>
+  <br/>
+  <div class="container">
+    <label id="name" for="name"><b>Name</b></label>
+    <br />
+    <br>
+    <input type="text" placeholder="Enter Name" name="nname" required>
+    <br />
+    <br />
+    <label id="surname" for="surnamee"><b>Surname</b></label>
+    <br />
+    <br />
+    <input type="text" placeholder="Enter Surname" name="surnamee" required>
+    <br />
+    <br />
+    <label id="secondsurname" for="ssurname"><b>Second surname</b></label>
+    <br />
+    <br />
+    <input type="text" placeholder="Enter Second Surname" name="ssurname" required>
+    <br />
+    <br />
+  <button ion-button color="secondary" (click)="goToStep2()" id = "boton2" round>Next</button>
+  </div>
+</ion-content>

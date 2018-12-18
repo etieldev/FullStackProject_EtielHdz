@@ -1,0 +1,33 @@
+h1{
+	text-align: center;
+    color: brown;
+    border-style: dotted
+}
+
+h3{
+	color: darkgreen;
+    text-align: center;
+    border-style: dotted
+}
+
+body{
+	background-color: #FFE4E1;
+}
+
+#fondo{
+	background-color: rgb(198, 209, 196);
+}
+
+#notary{
+    display: block;
+    margin: auto;
+    border-style: hidden;
+    width: 250px;
+    height: 190px;
+    border-top-style: inherit
+}
+
+a{
+	font-weight: bold;
+	color: 	#000000;
+}

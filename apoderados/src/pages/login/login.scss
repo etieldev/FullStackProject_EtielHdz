@@ -1,0 +1,57 @@
+page-login{
+    h1{
+        text-align: center;
+        color: brown;
+        border-style: dotted
+    }
+
+    #login{
+        width: 90px;
+        height: 70px
+    }
+
+    #login{
+        display: block;
+        margin: auto;
+    }
+
+    #boton{
+        display: block;
+        margin: auto;  
+    }
+
+
+    .toolbar-background {
+        background-color: rgb(198, 209, 196) !important;
+      }
+
+      .container{
+          text-align: center
+      }
+
+      #name{
+        font:bold 22px "Trebuchet MS";
+        color: darkgreen;
+        text-align: center;
+        border-style: dotted
+      }
+
+      #password{
+        font:bold 22px "Trebuchet MS"; 
+        color: darkgreen;
+        text-align: center;
+        border-style: dotted
+      }
+
+      input:invalid {
+        border: 1px solid red;
+      }
+      
+      input:valid {
+        border: 1px solid green;
+      }
+
+      #fondo {
+        background: linear-gradient(top, white, #D2B4B4);
+    } 
+}

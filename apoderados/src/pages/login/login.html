@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id = "fondo">
+  <br />
+  <h1 id='title'><span class="colors">Sign In</span></h1>
+
+  <img src="assets/imgs/notario.png" id="login">
+  <br/>
+
+  <div class="container">
+    <label id="name" for="uname"><b>Username</b></label>
+    <br />
+    <br>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <br />
+    <br />
+    <label id="password" for="psw"><b>Password</b></label>
+    <br />
+    <br>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <br />
+    <br />
+    <button ion-button color="secondary"  (click) ="goToList()" round>Login</button>
+    <br />
+    <button ion-button color="secondary" (click)="goToSignUp()" id = "boton" round>Create account</button>
+  </div>
+</ion-content>

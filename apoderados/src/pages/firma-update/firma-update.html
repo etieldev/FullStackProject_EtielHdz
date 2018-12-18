@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Signature Update</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id = "fondo">
+  <form #firmaForm="ngForm" (ngSubmit)="save(firmaForm.value)">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item>
+            <ion-input placeholder="Firma" name="num_escritura" type="number" required [(ngModel)]="firma.num_escritura" #num_escritura></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Fecha" name="fecha" type="text" required [(ngModel)]="firma.fecha" #fecha></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Precio" name="precio_vivienda" type="number" required [(ngModel)]="firma.precio_vivienda" #precio_vivienda></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Número de Caras" name="num_caras" type="number" required [(ngModel)]="firma.num_caras" #num_caras></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Garaje" name="garaje" type="number" required [(ngModel)]="firma.garaje" #garaje></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Trastero" name="trastero" type="number" required [(ngModel)]="firma.trastero" #trastero></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Número de personas" name="num_persona" type="number" required [(ngModel)]="firma.num_persona" #num_persona></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="ID de oficina" name="id_Oficinas" type="number" required [(ngModel)]="firma.id_Oficinas.id_Oficinas" #id_Oficinas></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+        <button ion-button color="primary" full type="submit" [disabled]="!firmaForm.form.valid">Save</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
